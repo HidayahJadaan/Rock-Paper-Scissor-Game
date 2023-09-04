@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(114, 240, 236, 0.5);
+    background-color: linear-gradient(to right, rgba(114, 240, 236, 0.5), rgba(114, 240, 236, 0));
+    text-align: center;
+}
+
+
+/*=============================================================================================================== */
+
+.Big-title {
+    position: absolute;
+    top: -50%;
+    left: 45%;
+    color: #222;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 700;
+
+}
+
+#choices {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.img-title {
+    display: block;
+    color: #222;
+    font-family: 'Roboto';
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 80px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 70px;
+}
+
+/*=============================================================== Shadowing For Images ========================================================================*/
+.img-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+#rock .img-container::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 10%;
+    background: rgba(3, 3, 3, 0.1);
+    /* Shadow color and transparency */
+    bottom: 0px;
+    /* the distance of the shadow from the element */
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+#paper .img-container::before,
+#scissor .img-container::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 10%;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: -55px;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/*============================================================ Game Window Style =============================================================== */
+
+.Game-Window {
+    width: 80%;
+    display: none;
+    /* Hide the game window initially */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    /* Align elements horizontally with space around */
+    height: 100vh;
+    position: relative;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#your-choice {
+    cursor: pointer;
+}
+
+.result-container {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+}
+
+.result-message {
+
+    width: 357px;
+    height: 43px;
+    color: #222;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 50px;
+    font-weight: 700;
+}
+
+#play-again {
+    display: none;
+    position: absolute;
+    top: 80%;
+    left: 45%;
+    background-color: #FFC300;
+    border: 2px solid #FFC300;
+    border-radius: 7px;
+    color: #000;
+    padding: 10px 20px;
+    font-size: 28px;
+    cursor: pointer;
+}
