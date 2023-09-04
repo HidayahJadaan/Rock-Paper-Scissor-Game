@@ -139,3 +139,79 @@ body {
     font-size: 28px;
     cursor: pointer;
 }
+
+/*============================================================ Responsive Part =============================================================== */
+
+
+@media (max-width: 650px) {
+    .Big-title {
+        top: -10%;
+        left: 40%;
+        font-weight: bold;
+    }
+
+    #choices {
+        width: 100%;
+        flex-direction: column;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .choice-item {
+        margin-bottom: 20px;
+    }
+
+    .img-container {
+        width: 150px;
+        height: 150px;
+        left: 35%;
+    }
+    .img-title {
+       text-align: center;
+       padding-top: 25px;
+    }
+    
+    #rock .img-container::before {
+      
+        bottom: -45px;
+      
+    }
+    
+    #paper .img-container::before,
+    #scissor .img-container::before {
+      
+        bottom: -90px;
+      
+    }
+    .Game-Window {
+        width: 100%;
+        position: absolute;
+        top: 20%;
+        height: auto;
+        flex-direction: column;
+
+    }
+
+    #your-choice,
+    #computer-choice {
+        width: 40%;
+        height: 30%;
+        margin-bottom: 50px;
+    }
+
+    .result-message {
+        display: block;
+position: relative;     
+   top: -90px;
+        left: 0;
+        margin-bottom: 40px;
+    }
+
+    #play-again {
+        position: relative;
+        top: 700px;
+        font-size: 20px;
+        left: 40%;
+    }
+}
