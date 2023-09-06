@@ -40,7 +40,7 @@ function getResult(player, computer) {
         return "YOU TIED!";
     } else if ((player === "rock" && computer === "scissors") ||
         (player === "scissors" && computer === "paper") ||
-        (player === "paper" && computer === "rock")) {
+        (player === "paper" && computer === "rock") ||  (player === "paper" && computer === "rightRock")) {
         return "YOU WIN!";
     } else {
         return "YOU LOST!";
